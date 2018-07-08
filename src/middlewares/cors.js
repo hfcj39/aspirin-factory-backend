@@ -1,5 +1,6 @@
 const customHeaders = [
   'appkey',
+  'aspirin-token'
 ].join(',')
 
 module.exports = async function (ctx, next) {
