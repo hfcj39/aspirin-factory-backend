@@ -16,6 +16,26 @@ module.exports = orm.define('tb_question', Object.assign({
     comment: '题目id',
   },
 
+  category: {
+    type: Sequelize.STRING,
+    comment: '类别',
+  },
+
+  editor: {
+    type: Sequelize.STRING,
+    comment: '管理员',
+  },
+
+  note: {
+    type: Sequelize.TEXT,
+    comment: '备注',
+  },
+
+  contributor: {
+    type: Sequelize.STRING,
+    comment: '协作者（数组）',
+  },
+
   hasContributeRecord: {
     type: Sequelize.BOOLEAN,
     comment: '是否有贡献记录',
