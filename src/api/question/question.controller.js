@@ -142,8 +142,13 @@ const updateDatabase = async (ctx) => {
       json: true,
     }
     let new_rst = await getStatus(options)
+    // console.log(new_rst)
     let collaborator_rst = await getStatus(collaborator_options)
+    // console.log(collaborator_rst)
     let contributor = []
+    if(collaborator_rst.code===141){
+      collaborator_rst=[]
+    }
     for (let user of collaborator_rst) {
       contributor.push({
         username: user.user.username,
